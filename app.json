@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "geo",
+    "slug": "geo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.suvajcevic.geo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1Ijoic3V2YWpjZXZpYyIsImEiOiJjbGtqaHIwMnkwMDFjM3BsOTJ6NDUxbWcwIn0.Ht8uKROmB-o0q1ObX7lOlQ"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Show current location on map."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "bf3e4fac-10da-448c-a421-6878bdf07e00"
+      }
+    }
+  }
+}
